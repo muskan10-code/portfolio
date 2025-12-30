@@ -14,7 +14,8 @@ const HireMe = () => {
                     flex items-center justify-center
                     hover:bg-light hover:text-dark transition"
                 >
-                    Hire Me
+                    {/* Hire Me */}
+                    Let's Talk
                     {/* Start a Conversation */}
                     {/* Let's Work Together */}
                 </a>
