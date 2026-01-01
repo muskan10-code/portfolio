@@ -30,12 +30,12 @@ export default function About() {
                                         I thrive on building systems that are robust, scalable, and intelligent.
                                     </p>
                                     <p className='my-4 font-medium'>
-                                        I believe that engineering is about more than just writing code—it’s about crafting efficient solutions that solve real human problems.
-                                        From architecting high-traffic financial platforms to developing accessible AI learning tools,
+                                        I believe that engineering is about more than just writing code, it’s about crafting efficient solutions that solve real human problems.
+                                        From architecting high traffic financial platforms to developing accessible AI learning tools,
                                         I am always looking for the most impactful way to apply technology.
                                     </p>
                                     <p className='font-medium'>
-                                        Whether I’m optimizing backend microservices or fine-tuning NLP models, I bring a commitment to precision and performance to every project.
+                                        Whether I’m optimizing backend microservices or fine tuning NLP models, I bring a commitment to precision and performance to every project.
                                         I am eager to apply my Full-Stack expertise to build the next generation of innovative software.
                                     </p>
                                 </div>
