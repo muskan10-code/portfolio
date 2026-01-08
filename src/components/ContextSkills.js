@@ -67,7 +67,7 @@ const SkillPill = ({ skill }) => {
         <motion.div
             whileHover={{ scale: 1.08 }}
             className="
-        relative group px-4 py-2 rounded-full border
+        relative group px-3 py-1 text-sm md:px-4 md:py-2 md:text-base rounded-full border
         bg-light text-dark border-dark/60
         dark:bg-dark dark:text-light dark:border-light/60
         font-medium cursor-pointer
@@ -80,7 +80,7 @@ const SkillPill = ({ skill }) => {
                 className="
           pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2
           opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100
-          transition-all duration-200
+          transition-all duration-200 z-50
         "
             >
                 <div className="bg-dark text-light dark:bg-light dark:text-dark text-xs px-3 py-2 rounded-md shadow-lg whitespace-nowrap">
@@ -99,20 +99,20 @@ const SkillCard = ({ title, skills }) => {
             transition={{ duration: 0.45 }}
             viewport={{ once: true }}
             className="
-        w-full p-8 bg-white border border-dark rounded-3xl shadow-lg
+        w-full p-4 md:p-8 bg-white border border-dark rounded-3xl shadow-lg
         dark:bg-dark dark:border-light dark:shadow-light/20
       "
         >
             <h3
                 className="
-          font-bold text-2xl mb-6 text-center
+          font-bold text-xl md:text-2xl mb-6 text-center
           text-primary dark:text-primaryDark
         "
             >
                 {title}
             </h3>
 
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
                 {skills.map((skill, index) => (
                     <SkillPill key={index} skill={skill} />
                 ))}
@@ -126,28 +126,24 @@ const ContextSkills = () => {
         <section className="mt-5 w-full flex flex-col items-center justify-center">
             <h2
                 className="
-          font-bold text-8xl mt-20 w-full text-center
-          text-dark dark:text-light
-          md:text-6xl md:mt-16
-        "
+                font-bold text-4xl mt-10 w-full text-center
+                text-dark dark:text-light
+                md:text-8xl md:mt-10
+                "
             >
                 Skills
             </h2>
 
             <div
                 className="
-          grid grid-cols-2 gap-8 w-full max-w-[1200px]
-          mt-16 px-8 lg:grid-cols-1 md:px-4
-        "
+                grid grid-cols-1 gap-8 w-full max-w-[1200px]
+                mt-10 px-8 md:px-4
+                "
             >
                 {skillsData.map((category, index) => (
                     <div
                         key={index}
-                        className={
-                            index === skillsData.length - 1
-                                ? "col-span-2 lg:col-span-1"
-                                : "col-span-1"
-                        }
+                        className="col-span-1"
                     >
                         <SkillCard title={category.title} skills={category.skills} />
                     </div>

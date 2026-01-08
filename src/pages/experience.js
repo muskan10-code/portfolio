@@ -95,21 +95,16 @@ const TimelineItem = ({ data, index }) => {
                     )}
                 </div>
 
-                {/* Mobile View */}
                 <div className="block lg:hidden w-full">
                     <TimelineDate date={data.date} align="left" mobile={true} />
                     <TimelineCard data={data} align="left" />
                 </div>
             </div>
 
-            {/* CENTER ICON */}
-            <div className="absolute left-[38px] lg:left-1/2 top-0 lg:top-1/2 -translate-y-0 lg:-translate-y-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-light text-white border-4 border-dark shadow-lg z-20 dark:bg-light dark:text-dark dark:border-dark">
-                <span className="text-xl">{data.type === "work" ? "💼" : "🎓"}</span>
+            <div className="absolute left-[20px] lg:left-1/2 top-0 lg:top-1/2 -translate-y-0 lg:-translate-y-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-light text-white border-4 border-dark shadow-lg z-20 dark:bg-light dark:text-dark dark:border-dark">
+                <span className="text-lg">{data.type === "work" ? "💼" : "🎓"}</span>
             </div>
 
-            {/* RIGHT SIDE: (Desktop: 45%) */}
-            {/* If Even: Date is here. We align Date text LEFT (towards center). Flex items START. */}
-            {/* If Odd: Card is here. We align Header text LEFT (towards center). Flex items START. */}
             <div className={`w-full lg:w-[45%] hidden lg:flex flex-col z-10 
                 ${isEven ? 'items-start text-left' : 'items-start text-left'}`}>
                 {isEven ? (
@@ -132,7 +127,6 @@ const TimelineCard = ({ data, align }) => {
             viewport={{ once: true }}
             className="w-full p-6 bg-white border border-solid border-dark rounded-2xl shadow-xl dark:bg-dark dark:border-light dark:shadow-light/20"
         >
-            {/* Header Alignment Container */}
             <div className={`flex flex-col ${align === 'right' ? 'items-end text-right' : 'items-start text-left'}`}>
                 <h3 className="font-bold text-xl text-primary dark:text-primaryDark">
                     {data.title}
@@ -142,7 +136,6 @@ const TimelineCard = ({ data, align }) => {
                 </h4>
             </div>
 
-            {/* Description always left aligned */}
             <ul className="list-disc ml-5 space-y-1 text-sm font-medium text-dark/90 dark:text-light/90 text-left">
                 {data.description.map((point, i) => (
                     <li key={i} className="pl-1">
@@ -157,12 +150,10 @@ const TimelineCard = ({ data, align }) => {
 const TimelineDate = ({ date, align, mobile }) => {
     return (
         <motion.div
-            // Animation direction depends on side
             initial={{ opacity: 0, x: align === 'left' ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            // Text alignment: strictly align text to center line
             className={`mb-2 w-full ${mobile ? 'text-left pl-1' : (align === 'right' ? 'text-right pr-6' : 'text-left pl-6')}`}
         >
             <h3 className="font-bold text-2xl text-dark/50 dark:text-light/50 lg:text-xl">
@@ -187,9 +178,9 @@ export default function Experience() {
             </Head>
             <TransitionEffect />
             <main className="w-full min-h-screen mb-10 flex flex-col items-center justify-center dark:text-light overflow-hidden">
-                <div className="pt-10 w-full text-center mb-24 lg:mb-20">
+                <div className="pt-10 w-full text-center mb-12 lg:mb-20">
                     <motion.h1
-                        className="font-bold text-8xl w-full text-center text-dark dark:text-light lg:text-7xl sm:text-6xl xs:text-4xl"
+                        className="font-bold text-7xl w-full text-center text-dark dark:text-light lg:text-7xl sm:text-6xl xs:text-4xl"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}

@@ -120,7 +120,7 @@ const Projects = () => {
                 <div className="pt-16 w-full max-w-[1200px] px-8 lg:px-16 md:px-8 sm:px-2">
 
                     <motion.h1
-                        className="font-bold text-4xl mb-16 w-full text-center lg:text-7xl sm:text-6xl xs:text-4xl text-dark dark:text-light"
+                        className="font-bold text-5xl mb-10 w-full text-center lg:text-7xl sm:text-6xl xs:text-4xl text-dark dark:text-light"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}

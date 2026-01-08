@@ -16,10 +16,10 @@ export default function About() {
             </Head>
             <TransitionEffect />
             <main className='flex w-full flex-col items-center justify-center dark:text-light dark:bg-dark'>
-                <Layout className='pt-16 dark:bg-dark'>
+                <Layout className='pt-8 dark:bg-dark'>
                     <AnimatedText
                         text="Code. Create. Innovate!"
-                        className='mb-16 lg:!text-7xl sm:text-md xs:text-md sm:mb-8'
+                        className='mb-5 text-xl lg:!text-7xl sm:text-md xs:text-md sm:mb-8'
                     />
                     <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
 
@@ -62,7 +62,7 @@ export default function About() {
                         </Link>
                     </div>
 
-                    <div className="mt-16 w-full">
+                    <div className="mt-10 w-full">
                         <ContextSkills />
                     </div>
                 </Layout>

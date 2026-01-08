@@ -34,8 +34,8 @@ export default function Home() {
 
               <AnimatedText
                 text="Architecting Robust Systems & Intelligent Web Solutions"
-                className='!text-6xl !text-left 
-                xl:!text-7xl lg:!text-6xl md:!text-5xl sm:!text-3xl'
+                className='!text-5xl text-center 
+                xl:!text-7xl lg:!text-6xl lg:text-left md:!text-5xl sm:!text-3xl'
               />
 
               <p className='my-4 text-base font-medium text-left md:text-sm sm:text-xs text-center lg:text-left'>
