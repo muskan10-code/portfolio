@@ -15,13 +15,13 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
     return (
-        <article className="w-full flex items-center justify-between relative rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 rounded-br-2xl dark:bg-dark dark:border-light xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+        <article className="w-full flex flex-col lg:flex-row items-center justify-between relative rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 rounded-br-2xl dark:bg-dark dark:border-light xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
 
             <Link
                 href={github}
                 target="_blank"
-                className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+                className="w-full lg:w-1/2 cursor-pointer overflow-hidden rounded-lg"
             >
                 <FramerImage
                     className="w-full h-auto "
@@ -36,11 +36,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
                 />
             </Link>
 
-            <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full">
+            <div className="w-full lg:w-1/2 flex flex-col items-start justify-between pl-0 lg:pl-6 pt-6 lg:pt-0">
                 <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
                     {type}
                 </span>
-                <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light ">
+                <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-3xl">
                     {title}
                 </h2>
                 <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
@@ -120,7 +120,7 @@ const Projects = () => {
                 <div className="pt-16 w-full max-w-[1200px] px-8 lg:px-16 md:px-8 sm:px-2">
 
                     <motion.h1
-                        className="font-bold text-8xl mb-16 w-full text-center lg:text-7xl sm:text-6xl xs:text-4xl text-dark dark:text-light"
+                        className="font-bold text-4xl mb-16 w-full text-center lg:text-7xl sm:text-6xl xs:text-4xl text-dark dark:text-light"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
@@ -128,23 +128,22 @@ const Projects = () => {
                         Where Logic Meets Art!
                     </motion.h1>
 
-                    <div className="grid grid-cols-12 gap-y-32 gap-x-12 xl:gap-x-16 lg:gap-x-12 md:gap-y-10 sm:gap-x-0">
-                        <div className="col-span-12">
-                            <FeaturedProject
-                                title="Distributed Consensus Engine"
-                                img={DistributesSystem}
-                                summary=" A fault-tolerant distributed system implementing the Raft Consensus Algorithm and Two-Phase Commit (2PC)
+                    <div className="grid grid-cols-12 gap-y-16 md:gap-y-16 gap-x-0 md:gap-x-12 xl:gap-x-16 lg:gap-x-12 sm:gap-x-0">                        <div className="col-span-12">
+                        <FeaturedProject
+                            title="Distributed Consensus Engine"
+                            img={DistributesSystem}
+                            summary=" A fault-tolerant distributed system implementing the Raft Consensus Algorithm and Two-Phase Commit (2PC)
                                             protocol to ensure data consistency across node clusters.
                                             Log Replication module implemented using Go, enabling leaders to synchronize entries with follower nodes via gRPC
                                             AppendEntries calls.
                                             Leader Election logic implemented in Python, utilizing randomized timeouts and heartbeat mechanisms to handle node failures and
                                             maintain cluster stability
                                             "
-                                link="/"
-                                github="https://github.com/muskan10-code/Distributed-Consensus-Engine"
-                                type="Featured Project"
-                            />
-                        </div>
+                            link="/"
+                            github="https://github.com/muskan10-code/Distributed-Consensus-Engine"
+                            type="Featured Project"
+                        />
+                    </div>
 
                         <div className="col-span-12 md:col-span-6">
                             <Project
